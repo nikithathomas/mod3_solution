@@ -11,6 +11,7 @@ input[type="text"] {
 }
 .loader {
   display: inline;
+  width:100%
   margin-left: 5px;
   font-size: 10px;
   float: left;
