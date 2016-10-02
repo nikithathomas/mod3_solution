@@ -1,7 +1,7 @@
 <div class="loader">
-    <ul>
+    <ol>
       <li ng-repeat="item in narrowIt.items">{{item.name}} {{item.short_name}} {{item.description}}
 <button ng-if="narrowIt.items.length"ng-click="narrowIt.onRemove({index: $index});">Don't want this one!</button>
 </li>
-    </ul>
+    </ol>
 </div>
