@@ -63,7 +63,7 @@ function MenuSearchService($http, ApiBasePath) {
 			var i=0;
 			arr=response.data.menu_items;
 			for(i=0;i<arr.length;i++){
-				if(arr[i].description==searchTerm){
+				if(arr[i].description.index(searchTerm)!=-1){
 					foundItems.push(arr[i]);
 				}
 			}
