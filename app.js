@@ -63,7 +63,7 @@ function MenuSearchService($http, ApiBasePath) {
 			var i=0;
 			arr=response.data.menu_items;
 			for(i=0;i<arr.length;i++){
-				if(arr[i].description.index(searchTerm)!=-1){
+				if(arr[i].description.indexOf(searchTerm)!=-1){
 					foundItems.push(arr[i]);
 				}
 			}
@@ -71,7 +71,7 @@ function MenuSearchService($http, ApiBasePath) {
 		});
 	};
 
-	service.removeItem = function (itemIndex) {
+service.removeItem = function (itemIndex) {
 	foundItems.splice(itemIndex, 1);
 };
 }
