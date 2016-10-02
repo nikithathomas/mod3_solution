@@ -1,1 +1,6 @@
-<div class="loader"></div>
+<div class="loader">
+    <ul>
+      <li ng-repeat="item in narrowIt.items">{{item.name}} {{item.short_name}} {{item.description}}</li>
+<button ng-if="narrowIt.items.length"ng-click="narrowIt.onRemove({index: $index});">Don't want this one!</button>
+    </ul>
+</div>

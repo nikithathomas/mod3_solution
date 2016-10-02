@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="NarrowItDownApp">
   <head>
     <title>Narrow Down Your Menu Choice</title>
@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-<body>
+  <body>
    <div class="container" ng-controller="NarrowItDownController as narrowIt">
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
@@ -16,13 +16,10 @@
     <div class="form-group narrow-button">
       <button class="btn btn-primary" ng-click="narrowIt.getMatchedMenuItems(searchTerm)">Narrow It Down For Me!</button>
     </div>
-    <!-- Bonus loader (see Bonus section of the assignment) -->
-    <items-loader-indicator></items-loader-indicator>
-
-    <!-- found-items should be implemented as a component -->
-    <found-items found-items="...." on-remove="...."></found-items>
-  </div>
+<list-item items="narrowIt.items" on-remove="narrowIt.removeItem(index)"></list-item>
+<div ng-if="narrowIt.errorMsg">{{narrowIt.errorMsg}}</div>
+    </div>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
